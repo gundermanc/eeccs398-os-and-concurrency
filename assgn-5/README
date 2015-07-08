@@ -1,0 +1,46 @@
+Case Western Reserve University
+EECS 338 Operating Systems
+Assignment #5
+Christian Gunderman
+cdg46
+
+FILES:
+main.c - application entry point and savings account code.
+monitor.c - my monitor implementation and semaphore code.
+Makefile - make build system file.
+README - this file.
+
+BUILD REQUIREMENTS:
+Built on Ubuntu 14.10 with GCC 4.9.1
+Requires build-essential package on Ubuntu
+Or standard build utils on other unix like systems.
+
+BUILDING:
+Run
+> make all
+to build application, or run
+> make all-debug
+to build with debug symbols (CC -g).
+
+RUNNING:
+First, build application and then run with
+> ./app
+
+ORIGINALITY:
+The contents of this package are 100% original and composed of my own work.
+No code was copied, modified, or referred to in the writing of this project.
+
+
+
+PROJECT REQUIREMENTS:
+
+I was unsure about the intended meaning of some of the assignment prompts
+so I made a few assumptions. I assumed that we were to create 100+
+threads that executed JUST ONE transaction. I also assumed that transaction
+amounts could be randomly generated as well.
+
+***NOTES:
+
+As far as I know, the project 100% holds up the requirements. The application
+does not always terminate, however, this is not a bug, but simply because the
+balance is less than is required to pay all of the pending withdrawals.

@@ -1,0 +1,41 @@
+Script started on Fri Apr 17 17:54:54 2015
+]0;cdg46@eecslinab7: ~cdg46@eecslinab7:~$ clear./client2.sh eecslinab3.case.edu
+RPC Mailbox Client 2
+(C) 2015 Christian Gunderman
+
++ ./client.sh eecslinab3.case.edu START eecslinab7
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab7 0 Zero
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab7 1 One
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab7 2 Two
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab7 3 Three
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab7 4 Four
+Done.
++ ./client.sh eecslinab3.case.edu DELETE_MESSAGE eecslinab7 0
+Done.
++ ./client.sh eecslinab3.case.edu RETRIEVE_MESSAGE eecslinab7 1
+OneDone.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab7 1 One-Two
+Done.
++ ./client.sh eecslinab3.case.edu RETRIEVE_MESSAGE eecslinab7 1
+One-TwoDone.
++ ./client.sh eecslinab3.case.edu RETRIEVE_MESSAGE eecslinab7 3
+ThreeDone.
++ ./client.sh eecslinab3.case.edu DELETE_MESSAGE eecslinab7 4
+Done.
++ ./client.sh eecslinab3.case.edu LIST_ALL_MESSAGES eecslinab7
+* One-Two
+* Two
+* Three
+Done.
++ ./client.sh eecslinab3.case.edu QUIT eecslinab7
+Done.
++ echo
+
+]0;cdg46@eecslinab7: ~cdg46@eecslinab7:~$ [Kexit
+
+Script done on Fri Apr 17 17:54:58 2015

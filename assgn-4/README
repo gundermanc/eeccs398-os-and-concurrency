@@ -1,0 +1,26 @@
+Case Western Reserve University
+EECS 338 Operating Systems
+Assignment #4
+Christian Gunderman
+cdg46
+
+FILES:
+main.c - application entry point and code.
+Makefile - make build system file.
+out.txt - output of execution on eecslinab3 server.
+README - this file.
+
+BUILDING:
+Run
+> make all
+to build application, or run
+> make all-debug
+to build with debug symbols (CC -g).
+
+RUNNING:
+First, build application and then run with
+> ./app
+
+ORIGINALITY:
+The contents of this package are 100% original and composed of my own work.
+No code was copied, modified, or referred to in the writing of this project.

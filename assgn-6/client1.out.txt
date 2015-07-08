@@ -1,0 +1,52 @@
+Script started on Fri Apr 17 17:53:46 2015
+]0;cdg46@eecslinab2: ~cdg46@eecslinab2:~$ ./client1.shg    eesc  cslinab3.case.edu
+RPC Mailbox Client 1
+(C) 2015 Christian Gunderman
+
++ ./client.sh eecslinab3.case.edu START eecslinab2
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 0 'My first message.'
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 0 'My second, first message.'
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 1 'It'\''s called #1 despite being second.'
+Done.
++ ./client.sh eecslinab3.case.edu DELETE_MESSAGE eecslinab2 0
+Done.
++ echo
+
++ echo These commands should return error msgs:
+These commands should return error msgs:
++ ./client.sh eecslinab3.case.edu DELETE_MESSAGE eecslinab2 0
+Error: Message not exists
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 -1 'Can'\''t create because it'\''s negative.'
+Error: Invalid message number
++ ./client.sh eecslinab3.case.edu RETRIEVE_MESSAGE eecslinab2 0
+Error: Message not exists
++ echo
+
++ echo These are more correct ones.
+These are more correct ones.
++ ./client.sh eecslinab3.case.edu RETRIEVE_MESSAGE eecslinab2 1
+It's called #1 despite being second.Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 2 Populating..
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 3 ..the..
+Done.
++ ./client.sh eecslinab3.case.edu INSERT_MESSAGE eecslinab2 4 ...list.
+Done.
++ ./client.sh eecslinab3.case.edu LIST_ALL_MESSAGES eecslinab2
+* It's called #1 despite being second.
+* Populating..
+* ..the..
+* ...list.
+Done.
++ ./client.sh eecslinab3.case.edu QUIT eecslinab2
+Done.
++ echo Try and list all messages again. It will fail cause we deleted user.
+Try and list all messages again. It will fail cause we deleted user.
++ ./client.sh eecslinab3.case.edu LIST_ALL_MESSAGES eecslinab2
+Error: User not exists
+]0;cdg46@eecslinab2: ~cdg46@eecslinab2:~$ [Kexit
+
+Script done on Fri Apr 17 17:54:01 2015
